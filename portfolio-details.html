@@ -73,9 +73,6 @@
                 <div class="row d-flex justify-content-center text-center">
                     <div class="col-lg-8">
                         <h1>Detalles del producto.</h1>
-                        <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint
-                            voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores.
-                            Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
                     </div>
                 </div>
             </div>
@@ -83,8 +80,8 @@
         <nav class="breadcrumbs">
             <div class="container">
                 <ol>
-                    <li><a href="index.html">Home</a></li>
-                    <li class="current">Portfolio Details</li>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="current">Detalles producto</li>
                 </ol>
             </div>
         </nav>
@@ -119,19 +116,15 @@
                         <div class="swiper-wrapper align-items-center">
 
                             <div class="swiper-slide">
-                                <img src="assets/img/portfolio/app-1.jpg" alt="">
+                                <img id="productoImagen" src="assets/img/sandalias/modelo-1/principal.jpg.jpg" alt="">
                             </div>
 
                             <div class="swiper-slide">
-                                <img src="assets/img/portfolio/product-1.jpg" alt="">
+                                <img src="assets/img/sandalias/modelo-1/carrusel-1.jpg.jpg" alt="">
                             </div>
 
                             <div class="swiper-slide">
-                                <img src="assets/img/portfolio/branding-1.jpg" alt="">
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="assets/img/portfolio/books-1.jpg" alt="">
+                                <img src="assets/img/sandalias/modelo-1/carrusel-2.jpg.jpg" alt="">
                             </div>
 
                         </div>
@@ -141,20 +134,24 @@
 
                 <div class="col-lg-4">
                     <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-                        <h3>Project information</h3>
-                        <ul>
-                            <li><strong>Category</strong>: Web design</li>
-                            <li><strong>Client</strong>: ASU Company</li>
-                            <li><strong>Project date</strong>: 01 March, 2020</li>
-                            <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
-                        </ul>
+                        <h3>Detalles</h3>
+                        <div id="producto" data-nombre="Zapatos Deportivos" data-precio="60000">
+                            <ul>
+                                <li><strong>Material</strong>: <span id="material">Sintético</span></li>
+                                <li><strong>Precio</strong>: <span id="precio">$ 60.000</span></li>
+                                <li><strong>Tallas</strong>: <span id="tallas">Disponibilidad de todas las tallas</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <section id="call-to-action" class="call-to-action section">
                         <div class="container">
                             <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
                                 <div class="col-xl-10">
                                     <div class="text-center">
-                                        <a class="cta-btn" href="#">Comprar</a>
+                                        <a id="whatsappLink" href="#" target="_blank" class="whatsapp">
+                                            <i class="bi bi-whatsapp"></i> Contactar por WhatsApp
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -178,7 +175,7 @@
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-6 footer-about">
                     <a href="index.html" class="logo d-flex align-items-center">
-                        <span class="sitename">GP</span>
+                        <span class="sitename">Lia</span>
                     </a>
                     <div class="footer-contact pt-3">
                         <p>A108 Adam Street</p>
@@ -263,6 +260,7 @@
 <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
 <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/js/mensajeWhatsapp.js"></script>
 
 <!-- Main JS File -->
 <script src="assets/js/main.js"></script>
