@@ -11,13 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
     let imagenProducto = document.getElementById("productoImagen")?.src || "";
 
     // Crear el mensaje para WhatsApp
-    let mensaje = `Hola, estoy interesado en *${nombreProducto}*.%0A
+    let mensaje = `Hola, estoy interesado en *${nombreProducto}*.\n
 💲 *Precio*: $${precioProducto}.\n
 📌 *Material*: ${materialProducto}.\n
-👟 *Tallas*: ${tallasProducto}.\n
+👡 *Tallas*: ${tallasProducto}.\n
 📷 Mira la imagen aquí: ${imagenProducto}`;
 
-    let url = `https://wa.me/+573154424707?text=${encodeURIComponent(mensaje)}`;
+    let url = `https://wa.me/+573157832101?text=${encodeURIComponent(mensaje)}`;
 
     // Asignar el enlace al botón de WhatsApp
     document.getElementById("whatsappLink").href = url;
