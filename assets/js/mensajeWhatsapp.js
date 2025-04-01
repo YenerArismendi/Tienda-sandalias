@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Crear el mensaje para WhatsApp
     let mensaje = `Hola, estoy interesado en *${nombreProducto}*.%0A
-💲 *Precio*: $${precioProducto}.%0A
-📌 *Material*: ${materialProducto}.%0A
-👟 *Tallas*: ${tallasProducto}.%0A
+💲 *Precio*: $${precioProducto}.\n
+📌 *Material*: ${materialProducto}.\n
+👟 *Tallas*: ${tallasProducto}.\n
 📷 Mira la imagen aquí: ${imagenProducto}`;
 
     let url = `https://wa.me/+573154424707?text=${encodeURIComponent(mensaje)}`;
