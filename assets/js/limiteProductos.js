@@ -1,45 +1,47 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let items = document.querySelectorAll(".portfolio-item");
-    let itemsToShow = 10;
-    let button = document.getElementById("loadMore");
+    const itemsPerPage = 10;
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    const loadMoreBtn = document.getElementById('loadMore');
+    let currentCount = 0;
 
-    // Ocultar todos los productos excepto los primeros 10
-    items.forEach((item, index) => {
-        if (index >= itemsToShow) {
-            item.style.visibility = "hidden";
-            item.style.height = "0";
+    function showItems() {
+        for (let i = currentCount; i < currentCount + itemsPerPage && i < portfolioItems.length; i++) {
+            const item = portfolioItems[i];
+            item.style.display = 'block';
+            setTimeout(() => item.classList.add('fade-in'), 10);
         }
-    });
+        currentCount += itemsPerPage;
 
-    button.addEventListener("click", function () {
-        let hiddenItems = Array.from(items).filter(item => item.style.visibility === "hidden");
-
-        hiddenItems.slice(0, 10).forEach(item => {
-            item.style.visibility = "visible";
-            item.style.height = "auto";
-        });
-
-        if (hiddenItems.length <= 10) {
-            button.style.display = "none";
+        if (currentCount >= portfolioItems.length) {
+            loadMoreBtn.style.display = 'none';
         }
-    });
+    }
+
+    // Inicializa
+    portfolioItems.forEach(item => item.style.display = 'none');
+    showItems();
+
+    loadMoreBtn.addEventListener('click', showItems);
 });
 
-// button.addEventListener("click", function () {
-//     let hiddenItems = Array.from(items).filter(item => item.style.display === "none");
-//
-//     hiddenItems.slice(0, 10).forEach(item => {
-//         item.style.display = "block";
-//     });
-//
-//     // ⚠️ Forzar redibujado
-//     let container = document.querySelector(".portfolio-container");
-//     container.style.display = "none";
-//     setTimeout(() => {
-//         container.style.display = "block";
-//     }, 10);
-//
-//     if (hiddenItems.length <= 10) {
-//         button.style.display = "none";
-//     }
-// });
+const botonesFiltro = document.querySelectorAll('.filter-btn');
+const productos = document.querySelectorAll('.producto');
+
+botonesFiltro.forEach(boton => {
+    boton.addEventListener('click', () => {
+        const filtro = boton.dataset.filter;
+
+        botonesFiltro.forEach(b => b.classList.remove('active'));
+        boton.classList.add('active');
+
+        productos.forEach(producto => {
+            const categoria = producto.dataset.categoria;
+
+            if (filtro === 'todos' || filtro === categoria) {
+                producto.style.display = 'block';
+            } else {
+                producto.style.display = 'none';
+            }
+        });
+    });
+});

@@ -87,22 +87,6 @@ h6 {
     font-family: var(--heading-font);
 }
 
-#loadMore {
-    position: relative;
-    z-index: 10;
-}
-
-.portfolio-item {
-    position: relative;
-    z-index: 1;
-}
-
-.portfolio-container {
-    overflow: visible !important;
-    position: relative;
-}
-
-
 /* PHP Email Form Messages
 ------------------------------*/
 .php-email-form .error-message {
@@ -1014,6 +998,11 @@ section,
     line-height: 0;
 }
 
+.isotope-container {
+    position: relative;
+    z-index: 10;
+}
+
 .features .features-item p {
     font-size: 15px;
     color: color-mix(in srgb, var(--default-color), transparent 20%);
@@ -1462,8 +1451,6 @@ section,
     margin-top: 40px;
 }
 
-}
-
 .contact .info-item i {
     color: var(--contrast-color);
     background: var(--accent-color);
@@ -1733,4 +1720,23 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
     /* Add your styles here */
+}
+
+/*prueba*/
+/* Estilo suave al mostrar los productos */
+.portfolio-item {
+    display: none;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Animación suave cuando se muestran */
+.portfolio-item.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Opcional: animación inicial */
+.portfolio-item {
+    opacity: 0;
+    transform: translateY(20px);
 }
