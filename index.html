@@ -67,7 +67,21 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-        <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+        <img src="assets/img/fondo.png" alt="" data-aos="fade-in">
+
+
+        <picture>
+            <!-- Para pantallas más pequeñas (móviles) -->
+            <source media="(max-width: 767px)" srcset="assets/img/fondo-telefono.png">
+
+            <!-- Para pantallas más grandes (PC) -->
+            <source media="(min-width: 768px)" srcset="assets/img/fondo.png">
+
+            <!-- Imagen por defecto en caso de que el navegador no soporte <picture> -->
+            <img src="assets/img/fondo.png" alt="Imagen principal">
+        </picture>
+
+
 
         <div class="container">
 
