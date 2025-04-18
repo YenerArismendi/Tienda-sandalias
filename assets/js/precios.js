@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Precio base y precio para suela alta
-    const precioBase = 45000; // Precio base (suela baja)
+    const precioBase = 40000; // Precio base (suela baja)
     const precioSuelaAlta = 60000; // Precio para suela alta
 
     // Obtener el tipo de suela desde el HTML
